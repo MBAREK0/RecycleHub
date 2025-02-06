@@ -1,30 +1,44 @@
 {
   "users": [
     {
-      "id": "ac772824-353e-4f1f-a8cd-52adc73ba1c1",
-      "email": "fovat@mailinator.com",
-      "password": "xxxxx",
-      "confirmPassword": "fovat@mailinator.com",
-      "firstName": "Cullen",
-      "lastName": "Richard",
-      "address": "Aute rem fugiat quas",
-      "phoneNumber": "+1 (567) 139-2058",
-      "dateOfBirth": "2014-06-19",
-      "profilePhoto": "assets/img/recycleHub/46faa68a-323a-4d5f-90ec-5da7f53a5d9f.png",
+      "id": "5301ea98-1102-45d9-a121-910896f24be1",
+      "email": "noxufun@mailinator.com",
+      "password": "noxufun@mailinator.com",
+      "confirmPassword": "noxufun@mailinator.com",
+      "firstName": "Cassidy",
+      "lastName": "Barnes",
+      "address": "Et dolore natus dict",
+      "city": "Nulla aut dolor ulla",
+      "phoneNumber": "+1 (992) 651-7183",
+      "dateOfBirth": "1994-05-26",
+      "profilePhoto": "assets/img/recycleHub/9dd85663-4f77-4c70-9391-713c82b20a1a.png",
       "role": "particulier"
+    }
+  ],
+  "collection-requests": [
+    {
+      "id": "70c83f0a-1b8c-4bf2-b0be-c208f44cde1d",
+      "wasteType": "metal",
+      "wastePhotos": "assets/img/recycleHub/7c9b7e79-5354-4200-aef1-1782e033a81e.png",
+      "estimatedWeight": 2623,
+      "collectionAddress": "Amet hic vero quia ",
+      "collectionDate": "1973-05-03",
+      "collectionTime": "14:40",
+      "additionalNotes": "Deleniti veritatis v",
+      "status": "pending",
+      "userId": "5301ea98-1102-45d9-a121-910896f24be1"
     },
     {
-      "id": "e272358c-0752-4195-878c-96dde9837f28",
-      "email": "lyzapobi@mailinator.com",
-      "password": "Pa$$w0rd!",
-      "confirmPassword": "Pa$$w0rd!",
-      "firstName": "Nero",
-      "lastName": "Moran",
-      "address": "Hic ex quisquam reru",
-      "phoneNumber": "+1 (273) 457-8773",
-      "dateOfBirth": "2015-05-16",
-      "profilePhoto": "assets/img/recycleHub/46faa68a-323a-4d5f-90ec-5da7f53a5d9f.png",
-      "role": "particulier"
+      "id": "7e3586d9-baef-4504-88b7-7fce3747940f",
+      "wasteType": "glass",
+      "wastePhotos": "assets/img/recycleHub/b3058cbc-6b53-470f-b3f5-c6b66f45208f.png",
+      "estimatedWeight": 3800,
+      "collectionAddress": "Proident veniam el",
+      "collectionDate": "2011-09-05",
+      "collectionTime": "13:37",
+      "additionalNotes": "Ex optio odio repre",
+      "status": "validated",
+      "userId": "5301ea98-1102-45d9-a121-910896f24be1",
     }
   ]
 }
