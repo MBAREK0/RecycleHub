@@ -4,6 +4,7 @@ import { RegisterComponent } from '../features/auth/register/register.component'
 import { DashboardComponent} from "../features/dashboard/dashboard.component";
 import {HomeComponent} from "../features/home/home.component";
 import {ProfileComponent} from "../features/profile/profile.component";
+import {authGuard} from "../core/guards/auth.guard";
 
 export const routes: Routes = [
   {
@@ -24,10 +25,12 @@ export const routes: Routes = [
       },
       {
         path: 'profile',
-        component: ProfileComponent
+        component: ProfileComponent,
+        canActivate: [authGuard],
+        data: { role: ['particulier','collecteur']},
       }
       ]
   },
-  { path: '', redirectTo: '/home', pathMatch: 'full' },
-  { path: '**', redirectTo: '/home' },
+  { path: '', redirectTo: '/', pathMatch: 'full' },
+  { path: '**', redirectTo: '/' },
 ];

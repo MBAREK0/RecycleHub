@@ -39,6 +39,7 @@ export class LoginComponent {
 
         if (user) {
           localStorage.setItem('userId', user.id);
+          localStorage.setItem('userRole', user.role);
           // Redirect based on user role
           if (user.role === 'particulier') {
             this.router.navigate(['/particulier-dashboard']);
