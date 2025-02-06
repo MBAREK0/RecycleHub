@@ -1,0 +1,30 @@
+{
+  "users": [
+    {
+      "id": "ac772824-353e-4f1f-a8cd-52adc73ba1c1",
+      "email": "fovat@mailinator.com",
+      "password": "xxxxx",
+      "confirmPassword": "fovat@mailinator.com",
+      "firstName": "Cullen",
+      "lastName": "Richard",
+      "address": "Aute rem fugiat quas",
+      "phoneNumber": "+1 (567) 139-2058",
+      "dateOfBirth": "2014-06-19",
+      "profilePhoto": "assets/img/recycleHub/46faa68a-323a-4d5f-90ec-5da7f53a5d9f.png",
+      "role": "particulier"
+    },
+    {
+      "id": "e272358c-0752-4195-878c-96dde9837f28",
+      "email": "lyzapobi@mailinator.com",
+      "password": "Pa$$w0rd!",
+      "confirmPassword": "Pa$$w0rd!",
+      "firstName": "Nero",
+      "lastName": "Moran",
+      "address": "Hic ex quisquam reru",
+      "phoneNumber": "+1 (273) 457-8773",
+      "dateOfBirth": "2015-05-16",
+      "profilePhoto": "assets/img/recycleHub/46faa68a-323a-4d5f-90ec-5da7f53a5d9f.png",
+      "role": "particulier"
+    }
+  ]
+}

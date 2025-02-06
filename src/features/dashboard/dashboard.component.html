@@ -17,41 +17,43 @@
       <div class="collapse navbar-collapse" id="navbarVerticalCollapse">
         <div class="navbar-vertical-content scrollbar">
           <ul class="navbar-nav flex-column mb-3 pt-2" id="navbarVerticalNav">
-
             <li class="nav-item">
-              <!-- parent pages-->
-              <a class="nav-link dropdown-indicator" href="#dashboard" role="button" data-bs-toggle="collapse" aria-expanded="true" aria-controls="dashboard">
-              <div class="d-flex align-items-center">
-                <span class="nav-link-icon"><span class="fas fa-chart-pie"></span>
-                </span><span class="nav-link-text ps-1">Dashboard</span>
-              </div>
-            </a>
-              <ul class="nav collapse show" id="dashboard">
-                <li class="nav-item"><a class="nav-link active" href="index.html">
-                  <div class="d-flex align-items-center"><span class="nav-link-text ps-1">Default</span></div>
-                </a><!-- more inner pages--></li>
-                <li class="nav-item"><a class="nav-link" href="dashboard/analytics.html">
-                  <div class="d-flex align-items-center"><span class="nav-link-text ps-1">Analytics</span></div>
-                </a><!-- more inner pages--></li>
-                <li class="nav-item"><a class="nav-link" href="dashboard/crm.html">
-                  <div class="d-flex align-items-center"><span class="nav-link-text ps-1">CRM</span></div>
-                </a><!-- more inner pages--></li>
-                <li class="nav-item"><a class="nav-link" href="dashboard/e-commerce.html">
-                  <div class="d-flex align-items-center"><span class="nav-link-text ps-1">E commerce</span></div>
-                </a><!-- more inner pages--></li>
-                <li class="nav-item"><a class="nav-link" href="dashboard/lms.html">
-                  <div class="d-flex align-items-center"><span class="nav-link-text ps-1">LMS</span><span class="badge rounded-pill ms-2 badge-subtle-success">New</span></div>
-                </a><!-- more inner pages--></li>
-                <li class="nav-item"><a class="nav-link" href="dashboard/project-management.html">
-                  <div class="d-flex align-items-center"><span class="nav-link-text ps-1">Management</span></div>
-                </a><!-- more inner pages--></li>
-                <li class="nav-item"><a class="nav-link" href="dashboard/saas.html">
-                  <div class="d-flex align-items-center"><span class="nav-link-text ps-1">SaaS</span></div>
-                </a><!-- more inner pages--></li>
-                <li class="nav-item"><a class="nav-link" href="dashboard/support-desk.html">
-                  <div class="d-flex align-items-center"><span class="nav-link-text ps-1">Support desk</span><span class="badge rounded-pill ms-2 badge-subtle-success">New</span></div>
-                </a><!-- more inner pages--></li>
-              </ul>
+              <!-- Dashboard Link -->
+              <a
+                class="nav-link"
+                routerLink="/"
+                routerLinkActive="active"
+                [routerLinkActiveOptions]="{ exact: true }"
+                role="button"
+                data-bs-toggle="collapse"
+                aria-expanded="true"
+                aria-controls="dashboard"
+              >
+                <div class="d-flex align-items-center">
+      <span class="nav-link-icon">
+        <span class="fas fa-chart-pie"></span>
+      </span>
+                  <span class="nav-link-text ps-1">Dashboard</span>
+                </div>
+              </a>
+
+              <!-- Profile Link -->
+              <a
+                class="nav-link"
+                routerLink="/profile"
+                routerLinkActive="active"
+                role="button"
+                data-bs-toggle="collapse"
+                aria-expanded="true"
+                aria-controls="dashboard"
+              >
+                <div class="d-flex align-items-center">
+      <span class="nav-link-icon">
+        <span class="fas fa-user"></span>
+      </span>
+                  <span class="nav-link-text ps-1">Profile</span>
+                </div>
+              </a>
             </li>
 
           </ul>
