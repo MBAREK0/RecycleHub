@@ -25,9 +25,11 @@ export class RegisterComponent {
     firstName: '',
     lastName: '',
     address: '',
+    city:'',
     phoneNumber: '',
     dateOfBirth: '',
-    profilePhoto: ''
+    profilePhoto: '',
+    role:''
   };
 
   constructor(private http: HttpClient, private router: Router) {}

@@ -1,0 +1,73 @@
+<div class="container mt-5">
+  <h2>Collector Dashboard</h2>
+  <p>Welcome, Collector! You can view and manage collection requests from your city.</p>
+
+  <!-- List of Collection Requests -->
+  <div class="mt-4">
+    <h3>Pending Collection Requests</h3>
+    <table class="table table-striped">
+      <thead>
+      <tr>
+        <th>Waste Types</th>
+        <th>Estimated Weight (g)</th>
+        <th>Collection Address</th>
+        <th>Collection Date</th>
+        <th>Collection Time</th>
+        <th>Actions</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let request of collectionRequests">
+        <td>{{ request.wasteTypes?.join(', ') }}</td>
+        <td>{{ request.estimatedWeight }}</td>
+        <td>{{ request.collectionAddress }}</td>
+        <td>{{ request.collectionDate }}</td>
+        <td>{{ request.collectionTime }}</td>
+        <td>
+          <button class="btn btn-primary btn-sm" (click)="selectRequest(request)">Select</button>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Selected Request Details -->
+  <div *ngIf="selectedRequest" class="mt-4">
+    <h3>Selected Request Details</h3>
+    <div class="card">
+      <div class="card-body">
+        <p><strong>Waste Types:</strong> {{ selectedRequest.wasteTypes?.join(', ') }}</p>
+        <p><strong>Estimated Weight:</strong> {{ selectedRequest.estimatedWeight }} g</p>
+        <p><strong>Collection Address:</strong> {{ selectedRequest.collectionAddress }}</p>
+        <p><strong>Collection Date:</strong> {{ selectedRequest.collectionDate }}</p>
+        <p><strong>Collection Time:</strong> {{ selectedRequest.collectionTime }}</p>
+        <p><strong>Additional Notes:</strong> {{ selectedRequest.additionalNotes }}</p>
+
+        <!-- Accept Request Button -->
+        <ng-container *ngIf="selectedRequest.status === 'occupied'; else acceptButton">
+          <button class="btn btn-success me-2" disabled>Accepted</button>
+        </ng-container>
+        <ng-template #acceptButton>
+          <button class="btn btn-success me-2" (click)="acceptRequest()">Accept Request</button>
+        </ng-template>
+        <button class="btn btn-danger me-2" (click)="rejectRequest()">Reject Request</button>
+
+        <!-- Validate Collection Form -->
+        <div class="mt-3">
+          <h4>Validate Collection</h4>
+          <form (ngSubmit)="validateCollection()">
+            <div class="mb-3">
+              <label class="form-label" for="actual-weight">Actual Weight (g)</label>
+              <input class="form-control" id="actual-weight" type="number" [(ngModel)]="actualWeight" name="actualWeight" required />
+            </div>
+            <div class="mb-3">
+              <label class="form-label" for="validation-photos">Validation Photos (Optional)</label>
+              <input class="form-control" id="validation-photos" type="file" (change)="onFileChange($event)" name="validationPhotos" />
+            </div>
+            <button class="btn btn-primary" type="submit">Validate Collection</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

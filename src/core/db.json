@@ -1,30 +1,78 @@
 {
   "users": [
     {
-      "id": "ac772824-353e-4f1f-a8cd-52adc73ba1c1",
-      "email": "fovat@mailinator.com",
-      "password": "xxxxx",
-      "confirmPassword": "fovat@mailinator.com",
-      "firstName": "Cullen",
-      "lastName": "Richard",
-      "address": "Aute rem fugiat quas",
-      "phoneNumber": "+1 (567) 139-2058",
-      "dateOfBirth": "2014-06-19",
-      "profilePhoto": "assets/img/recycleHub/46faa68a-323a-4d5f-90ec-5da7f53a5d9f.png",
-      "role": "particulier"
+      "id": "5301ea98-1102-45d9-a121-910896f24be1",
+      "email": "c@c.com",
+      "password": "c@c.com",
+      "confirmPassword": "c@c.com",
+      "firstName": "Cassidy",
+      "lastName": "Barnes",
+      "address": "Et dolore natus dict",
+      "city": "casa",
+      "phoneNumber": "+1 (992) 651-7183",
+      "dateOfBirth": "1994-05-26",
+      "profilePhoto": "assets/img/recycleHub/9dd85663-4f77-4c70-9391-713c82b20a1a.png",
+      "role": "collecteur",
+      "points": 224
+    }
+  ],
+  "collection-requests": [
+    {
+      "id": "9e6b27e8-8aa8-420e-936b-16576d2a6a59",
+      "wasteTypes": [
+        "glass",
+        "paper",
+        "metal"
+      ],
+      "wastePhotos": null,
+      "estimatedWeight": 7541,
+      "actualWeight": 32,
+      "collectionAddress": "Placeat excepturi n",
+      "collectionDate": "1998-01-21",
+      "collectionTime": "09:39",
+      "additionalNotes": "Necessitatibus eum c",
+      "status": "validated",
+      "userId": "5301ea98-1102-45d9-a121-910896f24be1",
+      "city": "casa",
+      "validationPhotos": null
     },
     {
-      "id": "e272358c-0752-4195-878c-96dde9837f28",
-      "email": "lyzapobi@mailinator.com",
-      "password": "Pa$$w0rd!",
-      "confirmPassword": "Pa$$w0rd!",
-      "firstName": "Nero",
-      "lastName": "Moran",
-      "address": "Hic ex quisquam reru",
-      "phoneNumber": "+1 (273) 457-8773",
-      "dateOfBirth": "2015-05-16",
-      "profilePhoto": "assets/img/recycleHub/46faa68a-323a-4d5f-90ec-5da7f53a5d9f.png",
-      "role": "particulier"
+      "id": "55c5fd79-6385-4040-9399-de2b8332bc44",
+      "wasteTypes": [
+        "plastic",
+        "glass",
+        "paper",
+        "metal"
+      ],
+      "wastePhotos": null,
+      "estimatedWeight": 2990,
+      "actualWeight": 0,
+      "collectionAddress": "Totam blanditiis pro",
+      "collectionDate": "1977-10-18",
+      "collectionTime": "11:13",
+      "additionalNotes": "Quis voluptate asper",
+      "status": "rejected",
+      "userId": "5301ea98-1102-45d9-a121-910896f24be1",
+      "city": "casa"
+    },
+    {
+      "id": "bc67df4d-8a92-4eb5-992c-598fbdecc986",
+      "wasteTypes": [
+        "plastic",
+        "glass",
+        "paper",
+        "metal"
+      ],
+      "wastePhotos": null,
+      "estimatedWeight": 4102,
+      "actualWeight": 0,
+      "collectionAddress": "Nam ducimus labore ",
+      "collectionDate": "2004-05-09",
+      "collectionTime": "09:41",
+      "additionalNotes": "Saepe eius at cupidi",
+      "status": "rejected",
+      "userId": "5301ea98-1102-45d9-a121-910896f24be1",
+      "city": "casa"
     }
   ]
 }

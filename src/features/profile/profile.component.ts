@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import {UUIDTypes} from "uuid";
 import {Router} from "@angular/router";
+import {UserService} from "../../core/service/user.service";
 
 @Component({
   selector: 'app-profile',
@@ -22,7 +23,7 @@ export class ProfileComponent implements OnInit {
     confirmPassword: ''
 
   }
-  constructor(private http: HttpClient,private router: Router) {}
+  constructor(private http: HttpClient,private router: Router, private userService: UserService) {}
 
   ngOnInit(): void {
     this.fetchUserData();
@@ -30,10 +31,9 @@ export class ProfileComponent implements OnInit {
 
   // Fetch user data from JSON server
   fetchUserData(): void {
-    this.http.get<any>(`http://localhost:3000/users/${this.userId}`).subscribe(
+    this.userService.getUserById(this.userId).subscribe(
       (data) => {
         this.user = data;
-        console.log("hhhhhhh",this.user)// Populate the form with user data
       },
       (error) => {
         console.error('Error fetching user data:', error);
