@@ -5,6 +5,7 @@ import { DashboardComponent} from "../features/dashboard/dashboard.component";
 import {HomeComponent} from "../features/home/home.component";
 import {ProfileComponent} from "../features/profile/profile.component";
 import {authGuard} from "../core/guards/auth.guard";
+import {CollectorDashboardComponent} from "../features/collector-dashboard/collector-dashboard.component";
 
 export const routes: Routes = [
   {
@@ -21,13 +22,21 @@ export const routes: Routes = [
     children: [
       {
         path: '',
-        component: HomeComponent
+        component: HomeComponent,
+        canActivate: [authGuard],
+        data: { role: ['particulier']},
       },
       {
         path: 'profile',
         component: ProfileComponent,
         canActivate: [authGuard],
         data: { role: ['particulier','collecteur']},
+      },
+      {
+        path: 'collection',
+        component: CollectorDashboardComponent,
+        canActivate: [authGuard],
+        data: { role: ['collecteur']},
       }
       ]
   },

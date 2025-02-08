@@ -23,7 +23,15 @@
         <div class="col-lg-8 pe-lg-2">
           <div class="card mb-3">
             <div class="card-header">
-              <h5 class="mb-0">Profile Settings</h5>
+
+              <div style="display: flex; align-items: center; justify-content: space-between">
+
+                <h5 class="mb-0">Profile Settings</h5>
+                <div *ngIf="user.role==='collecteur'" style="display: flex; align-items: center; justify-content: center">
+                  <span style="padding-right: 5px">Points: </span>
+                  <span class="badge bg-primary"> {{user.points}}</span>
+                </div>
+              </div>
             </div>
             <div class="card-body bg-body-tertiary">
               <form (ngSubmit)="updateUser()" class="row g-3">

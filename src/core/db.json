@@ -2,43 +2,77 @@
   "users": [
     {
       "id": "5301ea98-1102-45d9-a121-910896f24be1",
-      "email": "noxufun@mailinator.com",
-      "password": "noxufun@mailinator.com",
-      "confirmPassword": "noxufun@mailinator.com",
+      "email": "c@c.com",
+      "password": "c@c.com",
+      "confirmPassword": "c@c.com",
       "firstName": "Cassidy",
       "lastName": "Barnes",
       "address": "Et dolore natus dict",
-      "city": "Nulla aut dolor ulla",
+      "city": "casa",
       "phoneNumber": "+1 (992) 651-7183",
       "dateOfBirth": "1994-05-26",
       "profilePhoto": "assets/img/recycleHub/9dd85663-4f77-4c70-9391-713c82b20a1a.png",
-      "role": "particulier"
+      "role": "collecteur",
+      "points": 224
     }
   ],
   "collection-requests": [
     {
-      "id": "70c83f0a-1b8c-4bf2-b0be-c208f44cde1d",
-      "wasteType": "metal",
-      "wastePhotos": "assets/img/recycleHub/7c9b7e79-5354-4200-aef1-1782e033a81e.png",
-      "estimatedWeight": 2623,
-      "collectionAddress": "Amet hic vero quia ",
-      "collectionDate": "1973-05-03",
-      "collectionTime": "14:40",
-      "additionalNotes": "Deleniti veritatis v",
-      "status": "pending",
-      "userId": "5301ea98-1102-45d9-a121-910896f24be1"
-    },
-    {
-      "id": "7e3586d9-baef-4504-88b7-7fce3747940f",
-      "wasteType": "glass",
-      "wastePhotos": "assets/img/recycleHub/b3058cbc-6b53-470f-b3f5-c6b66f45208f.png",
-      "estimatedWeight": 3800,
-      "collectionAddress": "Proident veniam el",
-      "collectionDate": "2011-09-05",
-      "collectionTime": "13:37",
-      "additionalNotes": "Ex optio odio repre",
+      "id": "9e6b27e8-8aa8-420e-936b-16576d2a6a59",
+      "wasteTypes": [
+        "glass",
+        "paper",
+        "metal"
+      ],
+      "wastePhotos": null,
+      "estimatedWeight": 7541,
+      "actualWeight": 32,
+      "collectionAddress": "Placeat excepturi n",
+      "collectionDate": "1998-01-21",
+      "collectionTime": "09:39",
+      "additionalNotes": "Necessitatibus eum c",
       "status": "validated",
       "userId": "5301ea98-1102-45d9-a121-910896f24be1",
+      "city": "casa",
+      "validationPhotos": null
+    },
+    {
+      "id": "55c5fd79-6385-4040-9399-de2b8332bc44",
+      "wasteTypes": [
+        "plastic",
+        "glass",
+        "paper",
+        "metal"
+      ],
+      "wastePhotos": null,
+      "estimatedWeight": 2990,
+      "actualWeight": 0,
+      "collectionAddress": "Totam blanditiis pro",
+      "collectionDate": "1977-10-18",
+      "collectionTime": "11:13",
+      "additionalNotes": "Quis voluptate asper",
+      "status": "rejected",
+      "userId": "5301ea98-1102-45d9-a121-910896f24be1",
+      "city": "casa"
+    },
+    {
+      "id": "bc67df4d-8a92-4eb5-992c-598fbdecc986",
+      "wasteTypes": [
+        "plastic",
+        "glass",
+        "paper",
+        "metal"
+      ],
+      "wastePhotos": null,
+      "estimatedWeight": 4102,
+      "actualWeight": 0,
+      "collectionAddress": "Nam ducimus labore ",
+      "collectionDate": "2004-05-09",
+      "collectionTime": "09:41",
+      "additionalNotes": "Saepe eius at cupidi",
+      "status": "rejected",
+      "userId": "5301ea98-1102-45d9-a121-910896f24be1",
+      "city": "casa"
     }
   ]
 }

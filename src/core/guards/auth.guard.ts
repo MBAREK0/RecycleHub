@@ -4,10 +4,10 @@ import {UserService} from "../service/user.service";
 
 export const authGuard: CanActivateFn = (route, state) => {
   const router = inject(Router);
-  const userService = inject(UserService);
 
   // Get token from storage
   const userId = localStorage.getItem('userId');
+  console.log('guard', userId);
 
   if (!userId) {
     router.navigate(['/login']).then(r => console.log(r));

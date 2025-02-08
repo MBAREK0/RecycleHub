@@ -42,9 +42,9 @@ export class LoginComponent {
           localStorage.setItem('userRole', user.role);
           // Redirect based on user role
           if (user.role === 'particulier') {
-            this.router.navigate(['/particulier-dashboard']);
+            this.router.navigate(['/']);
           } else if (user.role === 'collecteur') {
-            this.router.navigate(['/collecteur-dashboard']);
+            this.router.navigate(['/collection']);
           }
         } else {
           alert('Invalid email or password.');

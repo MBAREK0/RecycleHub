@@ -16,16 +16,27 @@
         </div>
         <div class="p-4 pb-0">
           <form (ngSubmit)="onSubmit()">
-            <!-- Waste Type -->
+            <!-- Waste Types (Checkboxes) -->
             <div class="mb-3">
-              <label class="form-label" for="waste-type">Waste Type</label>
-              <select class="form-control" id="waste-type" [(ngModel)]="collectionRequest.wasteType" name="wasteType" required>
-                <option value="">Select Waste Type</option>
-                <option value="plastic">Plastic</option>
-                <option value="glass">Glass</option>
-                <option value="paper">Paper</option>
-                <option value="metal">Metal</option>
-              </select>
+              <label class="form-label">Waste Types</label>
+              <div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="plastic" value="plastic" (change)="toggleWasteType('plastic')">
+                  <label class="form-check-label" for="plastic">Plastic</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="glass" value="glass" (change)="toggleWasteType('glass')">
+                  <label class="form-check-label" for="glass">Glass</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="paper" value="paper" (change)="toggleWasteType('paper')">
+                  <label class="form-check-label" for="paper">Paper</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="metal" value="metal" (change)="toggleWasteType('metal')">
+                  <label class="form-check-label" for="metal">Metal</label>
+                </div>
+              </div>
             </div>
 
             <!-- Estimated Weight -->
@@ -38,6 +49,12 @@
             <div class="mb-3">
               <label class="form-label" for="collection-address">Collection Address</label>
               <input class="form-control" id="collection-address" type="text" [(ngModel)]="collectionRequest.collectionAddress" name="collectionAddress" required />
+            </div>
+
+            <!-- Collection City -->
+            <div class="mb-3">
+              <label class="form-label" for="collection-city">Collection City</label>
+              <input class="form-control" id="collection-city" type="text" [(ngModel)]="collectionRequest.city" name="collectionAddress" required />
             </div>
 
             <!-- Collection Date -->
@@ -76,15 +93,13 @@
   </div>
 </div>
 
-
-
 <!-- List of User's Collection Requests -->
 <div class="mt-5">
   <h3>Your Collection Requests</h3>
   <table class="table table-striped">
     <thead>
     <tr>
-      <th>Waste Type</th>
+      <th>Waste Types</th>
       <th>Estimated Weight (g)</th>
       <th>Collection Address</th>
       <th>Collection Date</th>
@@ -94,16 +109,18 @@
     </thead>
     <tbody>
     <tr *ngFor="let request of userRequests">
-      <td>{{ request.wasteType }}</td>
+
+      <td>{{ request.wasteTypes.join(', ') }}</td>
       <td>{{ request.estimatedWeight }}</td>
       <td>{{ request.collectionAddress }}</td>
       <td>{{ request.collectionDate }}</td>
       <td>{{ request.collectionTime }}</td>
       <td>
           <span [ngClass]="{
-            'badge bg-warning': request.status === 'pending',
-            'badge bg-success': request.status === 'validated',
-            'badge bg-danger': request.status === 'rejected',
+            'badge bg-warning text-white': request.status === 'pending',
+            'badge bg-success text-white': request.status === 'validated',
+            'badge bg-danger text-white': request.status === 'rejected',
+            'badge badge-subtle-info ': request.status === 'occupied',
             'p-1': true
           }">
             {{ request.status }}
@@ -113,5 +130,3 @@
     </tbody>
   </table>
 </div>
-
-

@@ -1,6 +1,6 @@
 import { Component, AfterViewInit, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {RouterLink, RouterLinkActive, RouterOutlet} from "@angular/router"; // Import CommonModule
+import {Router, RouterLink, RouterLinkActive, RouterOutlet} from "@angular/router";
 
 
 @Component({
@@ -12,6 +12,10 @@ import {RouterLink, RouterLinkActive, RouterOutlet} from "@angular/router"; // I
 })
 export class DashboardComponent implements OnInit, AfterViewInit {
   theme: string = 'auto'; // Default theme
+  userRole: string | null = localStorage.getItem('userRole');
+
+  constructor(private router: Router) {}
+
 
   ngOnInit(): void {
     // Maintain the original layout style from localStorage
@@ -89,5 +93,14 @@ export class DashboardComponent implements OnInit, AfterViewInit {
         navbarDoubleTop?.remove();
         navbarTopCombo?.remove();
     }
+  }
+
+  logOut(): void {
+    localStorage.removeItem('userId');
+    localStorage.removeItem('userRole');
+    console.log('Logged out successfully!');
+    console.log('R',localStorage.getItem('userId'));
+    this.router.navigate(['/login']);
+
   }
 }
