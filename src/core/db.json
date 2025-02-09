@@ -14,6 +14,20 @@
       "profilePhoto": "assets/img/recycleHub/9dd85663-4f77-4c70-9391-713c82b20a1a.png",
       "role": "collecteur",
       "points": 224
+    },
+    {
+      "id": "c226bf2f-afed-49ee-9096-33bbe2ac8ebf",
+      "email": "p@p.com",
+      "password": "p@p.com",
+      "confirmPassword": "pugonaci@mailinator.com",
+      "firstName": "Ezra",
+      "lastName": "Blackburn",
+      "address": "bkbd kbd dbzdbed zdadbz zadbdakd ezbze czecze ckezbczebcezbckz cekzcbzekcbzkebckc zekcbzeb",
+      "city": "casa",
+      "phoneNumber": "+1 (513) 305-7634",
+      "dateOfBirth": "1974-08-23",
+      "profilePhoto": "assets/img/recycleHub/d7ad96db-85ec-4870-97eb-c1aa0018239b.jpg",
+      "role": "particulier"
     }
   ],
   "collection-requests": [
@@ -72,6 +86,25 @@
       "additionalNotes": "Saepe eius at cupidi",
       "status": "rejected",
       "userId": "5301ea98-1102-45d9-a121-910896f24be1",
+      "city": "casa"
+    },
+    {
+      "id": "d5e99378-bca7-45df-a327-69cd75a49421",
+      "wasteTypes": [
+        "plastic",
+        "glass",
+        "paper",
+        "metal"
+      ],
+      "wastePhotos": null,
+      "estimatedWeight": 4752,
+      "actualWeight": 0,
+      "collectionAddress": "Necessitatibus dolor",
+      "collectionDate": "1970-04-18",
+      "collectionTime": "11:14",
+      "additionalNotes": "Omnis ipsam itaque p",
+      "status": "rejected",
+      "userId": "c226bf2f-afed-49ee-9096-33bbe2ac8ebf",
       "city": "casa"
     }
   ]
